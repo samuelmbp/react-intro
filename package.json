@@ -1,0 +1,23 @@
+{
+  "name": "react-intro",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "format": "prettier --write \"src/**/*.{js,jsx}\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samuelmbp/react-intro.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/samuelmbp/react-intro/issues"
+  },
+  "homepage": "https://github.com/samuelmbp/react-intro#readme",
+  "devDependencies": {
+    "prettier": "^2.6.2"
+  }
+}
