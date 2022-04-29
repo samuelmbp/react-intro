@@ -4,7 +4,7 @@ import Pet from "./Pet";
 const ANIMALS = ["birds", "cat", "dog", "rabbit", "reptile"];
 
 const SearchParams = () => {
-  const [location, setLocation] = useState("");
+  const [location, setLocation] = useState(""); // "" -> Initial state.
   const [animal, setAnimal] = useState("");
   const [breed, setBreed] = useState("");
   const breeds = [];
