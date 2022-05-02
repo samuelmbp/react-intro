@@ -2,6 +2,7 @@ import { Component } from "react";
 import { useParams } from "react-router-dom";
 import Carousel from "./Carousel";
 import ErrorBoundary from "./ErrorBoundary";
+import ThemeContext from "./ThemeContext";
 
 class Details extends Component {
   /** Class constructor 
@@ -27,8 +28,6 @@ class Details extends Component {
   render() {
     if (this.state.loading) return <h2>Loading...</h2>;
 
-    throw new Error("You crashed!");
-
     // Destructing
     const { animal, breed, city, state, description, name, images } =
       this.state; // e.g this.state.breed
@@ -41,7 +40,11 @@ class Details extends Component {
           <h2>
             {animal} - {breed} - {city} - {state}
           </h2>
-          <button>Adopt {name}</button>
+          <ThemeContext.Consumer>
+            {([theme]) => (
+              <button style={{ backgroundColor: theme }}>Adopt {name}</button>
+            )}
+          </ThemeContext.Consumer>
           <p>{description}</p>
         </div>
       </div>
